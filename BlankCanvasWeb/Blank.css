@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(155, 244, 159);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-left: 60px;
+}
+
+
+.SongImg{
+    position: relative;
+    width: fit-content;
+}
+.CDDisk{
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    z-index: -1;
+    transition: left 0.35s ease-in-out;
+    cursor: pointer;
+}
+.SongImg:hover .CDDisk{
+    left: 90px;
+    
+}
+.MusicPlayer{ 
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform:  translateY(-50%);
+}
+@keyframes flyToPlayer{
+    0% {transform: translateX(0) rotate(0deg); opacity: 1;}
+    50%{transform: translateX(700px) rotate(360deg); opacity: 1; }
+    100%{transform: translateX(750px) rotate(420deg); opacity: 0; }
+}
+#playToggle:checked + .SongImg .CDDisk{
+    animation: flyToPlayer 1.2s ease-in forwards;
+}
+.Music{
+    display: none;
+    position: absolute;
+    align-items: center;
+
+}
+
+#playToggle:checked ~ .Music{
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+    animation-delay: 1.5s;
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
