@@ -1,0 +1,42 @@
+#ball{
+    animation: ease-in 0.5s ease-in forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+    
+}
+@keyframes ease-in{
+    0% {transform: translateX(0) rotate(0deg); opacity: 1;}
+    100%{transform: translateX(500px) rotate(360deg); opacity: 0; }
+}
+#G{
+    animation: cfade 1.0s;
+}
+@keyframes cfade {
+    0% {transform: translate(0,-200px);}
+    100% {transform: translate(0,0);}
+    
+}
+#O{
+    animation: cfade 1.5s;
+}
+@keyframes cfade {
+    0% {transform: translate(0,-200px);}
+    100% {transform: translate(0,0);}
+    
+}
+#A{
+    animation: cfade 2s;
+}
+@keyframes cfade {
+    0% {transform: translate(0,-200px);}
+    100% {transform: translate(0,0);}
+    
+}
+#L{
+    animation: cfade 2.5s;
+}
+@keyframes cfade {
+    0% {transform: translate(0,-200px);}
+    100% {transform: translate(0,0);}
+    
+}
